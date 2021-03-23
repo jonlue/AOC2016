@@ -1,6 +1,7 @@
 # AOC2016
 [Advent of Code 2016](https://adventofcode.com/2016)
 ## Days
+<pre>
 * Day  1 ⭐⭐
 * Day  2 ⭐⭐
 * Day  3 ⭐⭐
@@ -26,4 +27,4 @@
 * Day 23 ⭐⭐
 * Day 24 
 * Day 25 ⭐
-
+</pre>
