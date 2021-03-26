@@ -1,29 +1,29 @@
 package main;
 
-import main.day1.TaxiCab;
-import main.day10.BalanceBot;
-import main.day11.RTGs;
-import main.day12.LeonardosMonorail;
-import main.day13.MazeOfTwistyLittleCubicles;
-import main.day14.OneTimePad;
-import main.day15.TimingIsEverything;
-import main.day16.DragonChecksum;
-import main.day18.LikeARouge;
-import main.day19.AnElephantNamedJoseph;
-import main.day2.BathroomSecurity;
-import main.day20.FirewallRules;
-import main.day21.ScrambledLettersAndHash;
-import main.day22.GridComputing;
-import main.day23.SafeCracking;
-import main.day24.AirDuctSpelunking;
-import main.day25.ClockSignal;
-import main.day3.ThreeSideSquares;
-import main.day4.ObscuritySecurity;
-import main.day5.GameOfChess;
-import main.day6.SignalsAndNoise;
-import main.day7.IPV7;
-import main.day8.TwoFactorAuthentication;
-import main.day9.CyberSpaceExplosives;
+import main.days.Day01;
+import main.days.Day10;
+import main.days.Day11;
+import main.days.Day12;
+import main.days.Day13;
+import main.days.Day14;
+import main.days.Day15;
+import main.days.Day16;
+import main.days.Day18;
+import main.days.Day19;
+import main.days.Day02;
+import main.days.Day20;
+import main.days.Day21;
+import main.days.Day22;
+import main.days.Day23;
+import main.days.Day24;
+import main.days.Day25;
+import main.days.Day03;
+import main.days.Day04;
+import main.days.Day05;
+import main.days.Day06;
+import main.days.Day07;
+import main.days.Day08;
+import main.days.Day09;
 
 import java.io.File;
 import java.io.IOException;
@@ -79,79 +79,79 @@ public class AOC16 {
         AOCRiddle riddle = null;
         switch(exercise){
             case(1):
-                riddle= new TaxiCab(in,part);
+                riddle= new Day01(in,part);
                 break;
             case(2):
-                riddle = new BathroomSecurity(in,part);
+                riddle = new Day02(in,part);
                 break;
             case(3):
-                riddle = new ThreeSideSquares(in,part);
+                riddle = new Day03(in,part);
                 break;
             case(4):
-                riddle = new ObscuritySecurity(in,part);
+                riddle = new Day04(in,part);
                 break;
             case(5):
-                riddle = new GameOfChess(in,part);
+                riddle = new Day05(in,part);
                 break;
             case(6):
-                riddle = new SignalsAndNoise(in,part);
+                riddle = new Day06(in,part);
                 break;
             case(7):
-                riddle = new IPV7(in,part);
+                riddle = new Day07(in,part);
                 break;
             case(8):
-                riddle = new TwoFactorAuthentication(in,part);
+                riddle = new Day08(in,part);
                 break;
             case(9):
-                riddle = new CyberSpaceExplosives(in,part);
+                riddle = new Day09(in,part);
                 break;
             case(10):
-                riddle = new BalanceBot(in,part);
+                riddle = new Day10(in,part);
                 break;
             case(11):
-                riddle = new RTGs(in,part);
+                riddle = new Day11(in,part);
                 break;
             case(12):
-                riddle = new LeonardosMonorail(in,part);
+                riddle = new Day12(in,part);
                 break;
             case(13):
-                riddle = new MazeOfTwistyLittleCubicles(in,part);
+                riddle = new Day13(in,part);
                 break;
             case(14):
-                riddle = new OneTimePad(in,part);
+                riddle = new Day14(in,part);
                 break;
             case(15):
-                riddle = new TimingIsEverything(in,part);
+                riddle = new Day15(in,part);
                 break;
             case(16):
-                riddle = new DragonChecksum(in,part);
+                riddle = new Day16(in,part);
                 break;
             case(17):
                 //riddle = new TooMuch(in,part);
                 break;
             case(18):
-                riddle = new LikeARouge(in,part);
+                riddle = new Day18(in,part);
                 break;
             case(19):
-                riddle = new AnElephantNamedJoseph(in,part);
+                riddle = new Day19(in,part);
                 break;
             case(20):
-                riddle = new FirewallRules(in,part);
+                riddle = new Day20(in,part);
                 break;
             case(21):
-                riddle = new ScrambledLettersAndHash(in,part);
+                riddle = new Day21(in,part);
                 break;
             case(22):
-                riddle = new GridComputing(in,part);
+                riddle = new Day22(in,part);
                 break;
             case(23):
-                riddle = new SafeCracking(in,part);
+                riddle = new Day23(in,part);
                 break;
             case(24):
-                riddle = new AirDuctSpelunking(in,part);
+                riddle = new Day24(in,part);
                 break;
             case(25):
-                riddle = new ClockSignal(in,part);
+                riddle = new Day25(in,part);
                 break;
             default:
         }
