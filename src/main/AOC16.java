@@ -53,7 +53,7 @@ public class AOC16 {
                 usage();
             }
         }
-        doExecrise(exercise,part,testing);
+        doExercise(exercise,part,testing);
     }
 
     private static void usage(){
@@ -62,7 +62,7 @@ public class AOC16 {
         System.exit(-1);
     }
 
-    private static void doExecrise(int exercise, int part,boolean test){
+    private static void doExercise(int exercise, int part, boolean test){
         String in = "";
         try {
             in = readFile((test ? "test" : "input" + exercise) + ".txt");
@@ -76,86 +76,34 @@ public class AOC16 {
     }
 
     private static AOCRiddle getRiddle(int exercise, int part, String in) {
-        AOCRiddle riddle = null;
-        switch(exercise){
-            case(1):
-                riddle= new Day01(in,part);
-                break;
-            case(2):
-                riddle = new Day02(in,part);
-                break;
-            case(3):
-                riddle = new Day03(in,part);
-                break;
-            case(4):
-                riddle = new Day04(in,part);
-                break;
-            case(5):
-                riddle = new Day05(in,part);
-                break;
-            case(6):
-                riddle = new Day06(in,part);
-                break;
-            case(7):
-                riddle = new Day07(in,part);
-                break;
-            case(8):
-                riddle = new Day08(in,part);
-                break;
-            case(9):
-                riddle = new Day09(in,part);
-                break;
-            case(10):
-                riddle = new Day10(in,part);
-                break;
-            case(11):
-                riddle = new Day11(in,part);
-                break;
-            case(12):
-                riddle = new Day12(in,part);
-                break;
-            case(13):
-                riddle = new Day13(in,part);
-                break;
-            case(14):
-                riddle = new Day14(in,part);
-                break;
-            case(15):
-                riddle = new Day15(in,part);
-                break;
-            case(16):
-                riddle = new Day16(in,part);
-                break;
-            case(17):
-                //riddle = new TooMuch(in,part);
-                break;
-            case(18):
-                riddle = new Day18(in,part);
-                break;
-            case(19):
-                riddle = new Day19(in,part);
-                break;
-            case(20):
-                riddle = new Day20(in,part);
-                break;
-            case(21):
-                riddle = new Day21(in,part);
-                break;
-            case(22):
-                riddle = new Day22(in,part);
-                break;
-            case(23):
-                riddle = new Day23(in,part);
-                break;
-            case(24):
-                riddle = new Day24(in,part);
-                break;
-            case(25):
-                riddle = new Day25(in,part);
-                break;
-            default:
-        }
-        return riddle;
+        return switch(exercise){
+            case 1 -> new Day01(in,part);
+            case 2 -> new Day02(in,part);
+            case 3 -> new Day03(in,part);
+            case 4 -> new Day04(in,part);
+            case 5 -> new Day05(in,part);
+            case 6 -> new Day06(in,part);
+            case 7 -> new Day07(in,part);
+            case 8 -> new Day08(in,part);
+            case 9 -> new Day09(in,part);
+            case 10 -> new Day10(in,part);
+            case 11 -> new Day11(in,part);
+            case 12 -> new Day12(in,part);
+            case 13 -> new Day13(in,part);
+            case 14 -> new Day14(in,part);
+            case 15 -> new Day15(in,part);
+            case 16 -> new Day16(in,part);
+            case 17 -> null;//new TooMuch(in,part);
+            case 18 -> new Day18(in,part);
+            case 19 -> new Day19(in,part);
+            case 20 -> new Day20(in,part);
+            case 21 -> new Day21(in,part);
+            case 22 -> new Day22(in,part);
+            case 23 -> new Day23(in,part);
+            case 24 -> new Day24(in,part);
+            case 25 -> new Day25(in,part);
+            default ->  null;
+        };
     }
 
     private static String readFile(String fileName) throws IOException {
