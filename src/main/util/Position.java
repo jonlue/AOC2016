@@ -18,7 +18,7 @@ public class Position {
     public Position(Position p) {
         this.x = p.x;
         this.y = p.y;
-        this.distance = p.distance ;
+        this.distance = p.distance;
     }
 
 
