@@ -1,29 +1,6 @@
 package main;
 
-import main.days.Day01;
-import main.days.Day10;
-import main.days.Day11;
-import main.days.Day12;
-import main.days.Day13;
-import main.days.Day14;
-import main.days.Day15;
-import main.days.Day16;
-import main.days.Day18;
-import main.days.Day19;
-import main.days.Day02;
-import main.days.Day20;
-import main.days.Day21;
-import main.days.Day22;
-import main.days.Day23;
-import main.days.Day24;
-import main.days.Day25;
-import main.days.Day03;
-import main.days.Day04;
-import main.days.Day05;
-import main.days.Day06;
-import main.days.Day07;
-import main.days.Day08;
-import main.days.Day09;
+import main.days.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -93,7 +70,7 @@ public class AOC16 {
             case 14 -> new Day14(in,part);
             case 15 -> new Day15(in,part);
             case 16 -> new Day16(in,part);
-            case 17 -> null;//new TooMuch(in,part);
+            case 17 -> new Day17(in,part);//new TooMuch(in,part);
             case 18 -> new Day18(in,part);
             case 19 -> new Day19(in,part);
             case 20 -> new Day20(in,part);
