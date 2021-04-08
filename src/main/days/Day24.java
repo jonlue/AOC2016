@@ -1,6 +1,7 @@
 package main.days;
 
 import main.AOCRiddle;
+import main.util.BreadthFirstSearch;
 import main.util.Position;
 
 import java.util.*;
@@ -64,55 +65,18 @@ public class Day24 extends AOCRiddle {
 
     private int[][] getDistancesGraph() {
         int[][] graph = new int[numberGoals][numberGoals];
+        BreadthFirstSearch bfs = new BreadthFirstSearch(maze);
         // TODO improve by doing a BFS from start to all goals instead of each separately
         for (int i = 0; i < numberGoals - 1; i++) {
             for (int j = i + 1; j < numberGoals; j++) {
-                int distance = BFS(goals.get(i), goals.get(j));
+                bfs.setStart(goals.get(i));
+                bfs.setGoal(goals.get(j));
+                int distance = bfs.run();
                 graph[i][j] = distance;
                 graph[j][i] = distance;
             }
         }
         return graph;
-    }
-
-    private int BFS(Position start, Position goal) {
-        Queue<Position> toVisit = new ArrayDeque<>();
-        Set<Position> visited = new HashSet<>();
-        toVisit.add(start);
-        visited.add(start);
-
-        while (!toVisit.isEmpty()) {
-            Position pos = toVisit.poll();
-            if (pos.equals(goal)) {
-                return pos.distance;
-            }
-
-            for (Position p : getNeighbors(pos)) {
-                if (!visited.contains(p)) {
-                    visited.add(p);
-                    toVisit.add(p);
-                }
-            }
-        }
-        return -1;
-    }
-
-    private List<Position> getNeighbors(Position pos) {
-        // edges are all walls therefore no check if out of bounds
-        List<Position> neighbors = new ArrayList<>();
-        if (maze[pos.y][pos.x + 1]) {
-            neighbors.add(new Position(pos.x + 1, pos.y, pos.distance + 1));
-        }
-        if (maze[pos.y][pos.x - 1]) {
-            neighbors.add(new Position(pos.x - 1, pos.y, pos.distance + 1));
-        }
-        if (maze[pos.y + 1][pos.x]) {
-            neighbors.add(new Position(pos.x, pos.y + 1, pos.distance + 1));
-        }
-        if (maze[pos.y - 1][pos.x]) {
-            neighbors.add(new Position(pos.x, pos.y - 1, pos.distance + 1));
-        }
-        return neighbors;
     }
 
     private void init() {
